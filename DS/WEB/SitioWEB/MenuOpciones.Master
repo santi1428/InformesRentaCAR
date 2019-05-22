@@ -1,0 +1,230 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MenuOpciones.master.cs" Inherits="SitioWEB.MenuOpciones" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+        body{
+            overflow-x: hidden
+        }
+        img{
+            width: 100%;
+            height: 15vh;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="row">
+                <div class="col-12">
+                    <img src="/assets/img/brandcars.png"/>
+                </div>
+            </div>
+        <div class="row mt-4">
+            <div class="col-2">
+              <div class="card bg-primary">
+              <%--  <div class="card-header">
+                  <p class="text-center text-white mb-0"><strong>Menu Opciones</strong></p>
+                </div>--%>
+                <ul class="nav flex-column text-center mt-0">
+                  <li class="nav-item">
+                    <div class="card-header bg-success">
+                      <a
+                        class="text-white nav-link p-0"
+                        data-toggle="collapse"
+                        href="#collapseClientes"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="collapseClientes"
+                        ><i class="fas fa-users"></i> Clientes</a
+                      >
+                    </div>
+                    <div class="collapse" id="collapseClientes">
+                      <div class="">
+                        <ul class="nav d-flex flex-column  bg-success">
+                          <li class="nav-item pb-2 pt-2">
+                            <a
+                              href="<?php echo URLROOT ?>dashboard"
+                              class="text-white"
+                              style="font-size:15px;"
+                              >Registrar cliente</a
+                            >
+                          </li>
+                          <li class="nav-item pb-2">
+                            <a
+                              href="<?php echo URLROOT ?>dashboard/agregarmascota"
+                              class="text-white"
+                              style="font-size:15px;"
+                              >Registrar mascota</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+    
+                  <li class="nav-item">
+                    <div class="card-header bg-secondary">
+                      <a
+                        class="text-white nav-link p-0"
+                        data-toggle="collapse"
+                        href="#collapseServicios"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="collapseServicios"
+                        ><i class="fas fa-list-alt"></i> Informes</a
+                      >
+                    </div>
+                    <div class="collapse" id="collapseServicios">
+                      <div class="">
+                        <ul class="nav d-flex flex-column bg-secondary">
+                          <li class="nav-item pb-2 pt-2">
+                            <a
+                              href="<?php echo URLROOT ?>dashboard/registrarServicio"
+                              class="text-white"
+                              style="font-size:15px;"
+                              ><i class="fas fa-file-invoice-dollar"></i> Alquiler Vehiculos</a
+                            >
+                          </li>
+                          <li class="nav-item pb-2 pt-2">
+                            <a
+                              href="<?php echo URLROOT ?>dashboard/registrarServicio"
+                              class="text-white"
+                              style="font-size:15px;"
+                              ><i class="fas fa-coins"></i> Ingresos</a
+                            >
+                          </li>
+                          <li class="nav-item pb-2 pt-2">
+                            <a
+                              href="<?php echo URLROOT ?>dashboard/registrarServicio"
+                              class="text-white"
+                              style="font-size:15px;"
+                              ><i class="fas fa-calendar-alt"></i> Reservas</a
+                            >
+                          </li>
+                          <li class="nav-item pb-2 pt-2">
+                            <a
+                              href="<?php echo URLROOT ?>dashboard/registrarServicio"
+                              class="text-white"
+                              style="font-size:15px;"
+                              ><i class="fas fa-car"></i> Vehiculos</a
+                            >
+                          </li>
+                          <li class="nav-item pb-2 pt-2">
+                            <a
+                              href="<?php echo URLROOT ?>dashboard/registrarServicio"
+                              class="text-white"
+                              style="font-size:15px;"
+                              ><i class="fas fa-undo"></i> Devolución Vehiculos</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="card-header" style="background:#33ba27;">
+                      <a
+                        class="text-white nav-link p-0"
+                        data-toggle="collapse"
+                        href="#collapseControles"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="collapseControles"
+                        ><i class="fas fa-calendar-alt mr-1"></i>Reservas</a
+                      >
+                    </div>
+                    <div class="collapse" id="collapseControles">
+                      <div class="">
+                        <ul class="nav d-flex flex-column" style="background:#33ba27;">
+                          <li class="nav-item pb-2 pt-2">
+                            <a
+                              href="<?php echo URLROOT ?>dashboard/registrarVeterinario"
+                              class="text-white"
+                              style="font-size:15px;"
+                              >Realizar Alquiler</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                      <div class="card-header bg-danger">
+                        <a
+                          class="text-white nav-link p-0"
+                          data-toggle="collapse"
+                          href="#collapseAlquiler"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="collapseAlquiler"
+                          ><i class="fas fa-file-invoice-dollar"></i> Alquiler</a
+                        >
+                      </div>
+                      <div class="collapse" id="collapseAlquiler">
+                        <div class="">
+                          <ul class="nav d-flex flex-column bg-danger">
+                            <li class="nav-item pb-2 pt-2">
+                              <a
+                                href="<?php echo URLROOT ?>dashboard/registrarVeterinario"
+                                class="text-white"
+                                style="font-size:15px;"
+                                >Registrar Veterinario</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  <li class="nav-item">
+                    <div class="card-header bg-primary">
+                      <a
+                        class="text-white nav-link p-0"
+                        data-toggle="collapse"
+                        href="#collapseVehiculos"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="collapseVehiculos"
+                        ><i class="fas fa-car"></i> Vehiculos</a
+                      >
+                    </div>
+                    <div class="collapse" id="collapseVehiculos">
+                      <div class="">
+                        <ul class="nav d-flex flex-column">
+                          <li class="nav-item pb-2 pt-2">
+                            <a
+                              href="<?php echo URLROOT ?>dashboard/registrarVeterinario"
+                              class="text-white"
+                              style="font-size:15px;"
+                              >Registrar Veterinario</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+          </div>
+        </div>
+    </form>
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -66,9 +66,6 @@ namespace SitioWEB.Informes
                 if (ddlOrdenar.SelectedValue == "0")
                  {
                         ddlValorCriterio.Items.Clear();
-                        ListItem d;
-                        d = new ListItem("", "");
-                        ddlValorCriterio.Items.Add(d);
                  }
 
                  if (ddlOrdenar.SelectedValue == "1")

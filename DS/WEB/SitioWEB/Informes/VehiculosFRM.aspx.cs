@@ -14,6 +14,9 @@ namespace SitioWEB.Informes
         public string[] marcas = new string[] { "Mazda", "Renault", "Skoda", "BMW", "Mercedez Benz", "Skodas", "Suzuki" };
         public string[] tipos = new string[] { "Automovil", "Bus", "Buseta", "Campero", "Camion Grand", "Camion", "Camion Pequeño", "Microbus", "Camioneta", "Tracto Camion" };
         public string[] estados = new string[] { "Disponible", "No disponible" };
+        public string[] colores = new string[] { "Blanco", "Negro", "Plata ", "Gris", "Azul", "Rojo", "Beige", "Amarillo", "Verde", "Otros" };
+        public string[] gamas = new string[] { "Baja", "Media", "Alta" };
+        public string[] modelos = new string[] { "2015", "2016", "2017", "2018", "2019", "2020" };
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -59,7 +62,25 @@ namespace SitioWEB.Informes
 
         protected void ddlOrdenar_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+                if (ddlOrdenar.SelectedValue == "0")
+                 {
+                        ddlValorCriterio.Items.Clear();
+                        ListItem d;
+                        d = new ListItem("", "");
+                        ddlValorCriterio.Items.Add(d);
+                 }
+
+                 if (ddlOrdenar.SelectedValue == "1")
+                 {
+                    LlenarValoresSeleccion(colores);
+                 }
          
+                if (ddlOrdenar.SelectedValue == "2")
+                {
+                    LlenarValoresSeleccion(estados);
+                }
+
                 if (ddlOrdenar.SelectedValue == "3")
                 {
                     LlenarValoresSeleccion(marcas);
@@ -70,19 +91,16 @@ namespace SitioWEB.Informes
                     LlenarValoresSeleccion(tipos);
                 }
 
-                if (ddlOrdenar.SelectedValue == "2")
+                if(ddlOrdenar.SelectedValue == "5")
                 {
-                    LlenarValoresSeleccion(estados);
+                    LlenarValoresSeleccion(gamas);
                 }
 
-                if (ddlOrdenar.SelectedValue == "0")
+                if (ddlOrdenar.SelectedValue == "6")
                 {
-                    ddlValorCriterio.Items.Clear();
-                    ListItem d;
-                    d = new ListItem("", "");
-                    ddlValorCriterio.Items.Add(d);
+                    LlenarValoresSeleccion(modelos);
                 }
-            
+
         }
 
 

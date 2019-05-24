@@ -76,6 +76,7 @@
     <Content Include="assets\js\jquery.min.js" />
     <Content Include="assets\js\popper.min.js" />
     <Content Include="Informes\AlquileresFRM.aspx" />
+    <Content Include="Informes\DevolucionFRM.aspx" />
     <Content Include="Informes\PagosFRM.aspx" />
     <Content Include="Informes\ReservasFRM.aspx" />
     <Content Include="Informes\VehiculosFRM.aspx" />
@@ -88,6 +89,13 @@
     </Compile>
     <Compile Include="Informes\AlquileresFRM.aspx.designer.cs">
       <DependentUpon>AlquileresFRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\DevolucionFRM.aspx.cs">
+      <DependentUpon>DevolucionFRM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Informes\DevolucionFRM.aspx.designer.cs">
+      <DependentUpon>DevolucionFRM.aspx</DependentUpon>
     </Compile>
     <Compile Include="Informes\PagosFRM.aspx.cs">
       <DependentUpon>PagosFRM.aspx</DependentUpon>

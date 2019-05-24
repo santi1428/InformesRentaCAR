@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MenuOpciones.Master" AutoEventWireup="true" CodeBehind="ReservasFRM.aspx.cs" Inherits="SitioWEB.Informes.ReservasFRM" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Informe de Vehiculos</title>
+    <title>Realizar reserva</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
@@ -13,7 +13,7 @@
                                 <div class="col-4">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <label class="input-group-text"><i class="fas fa-filter mr-2"></i> Fecha Inicial: </label>
+                                            <label class="input-group-text"><i class="fas fa-calendar mr-2"></i> Fecha Inicial: </label>
                                         </div>
                                         <asp:TextBox ID="TextFechaInicial" CssClass="custom-select" runat="server" TextMode="Date"></asp:TextBox>
                                     </div>
@@ -21,7 +21,7 @@
                                 <div class="col-4">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <label class="input-group-text" id="lblFechaFIn">Fecha Final</label>
+                                            <label class="input-group-text" id="lblFechaFIn"><i class="fas fa-calendar mr-2"></i>Fecha Final</label>
                                         </div>
                                         <asp:TextBox ID="TextFechaFInal" CssClass="custom-select" runat="server" TextMode="Date"></asp:TextBox>
                                     </div>

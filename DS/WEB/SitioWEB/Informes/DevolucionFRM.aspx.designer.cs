@@ -10,16 +10,16 @@
 namespace SitioWEB.Informes {
     
     
-    public partial class VehiculosFRM {
+    public partial class DevolucionFRM {
         
         /// <summary>
-        /// btnGenerarInformeVehiculos control.
+        /// btnDevolverVehiculo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnGenerarInformeVehiculos;
+        protected global::System.Web.UI.WebControls.LinkButton btnDevolverVehiculo;
         
         /// <summary>
         /// lblError control.
@@ -31,22 +31,49 @@ namespace SitioWEB.Informes {
         protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// ddlOrdenar control.
+        /// TextCodReserva control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlOrdenar;
+        protected global::System.Web.UI.WebControls.TextBox TextCodReserva;
         
         /// <summary>
-        /// ddlValorCriterio control.
+        /// TextKmFInal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlValorCriterio;
+        protected global::System.Web.UI.WebControls.TextBox TextKmFInal;
+        
+        /// <summary>
+        /// TextFechaActual control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextFechaActual;
+        
+        /// <summary>
+        /// TextDescripcion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextDescripcion;
+        
+        /// <summary>
+        /// TextMulta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextMulta;
         
         /// <summary>
         /// grdInformeVehiculos control.

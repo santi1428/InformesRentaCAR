@@ -11,12 +11,20 @@ namespace SitioWEB.Informes
 {
     public partial class PagosFRM : System.Web.UI.Page
     {
+        public string[] estados = new string[] { "Pendiente", "Realizado" };
+        public string[] aseguradoras = new string[] { "ALLIANZ SEGUROS S.A", "ARL SURA.", "AXA COLPATRIA SEGUROS S.A.", "BBVA SEGUROS COLOMBIA S.A." };
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
         protected void btnGenerarInformePagos_Click(object sender, EventArgs e)
+        {
+            LlenarGrid();
+        }
+
+        private void LlenarGrid()
         {
             PagoCTRL oInformePago = new PagoCTRL();
             oInformePago.grdInformePagos = grdInformePagos;
@@ -31,19 +39,69 @@ namespace SitioWEB.Informes
                     lblError.Text = "";
                 }
             }
-            //else
-            //{
-            //    oInformePago.parametroBusqueda = ddlValorCriterio.SelectedValue;
-            //    if (!oInformePago.LlenarGridPorCriterio())
-            //    {
-            //        lblError.Text = oInformePago.error;
-            //    }
-            //    else
-            //    {
-            //        lblError.Text = "";
-            //    }
-            //}
+            else
+            {
+                oInformePago.parametroBusqueda = ddlValorCriterio.SelectedValue;
+                if (!oInformePago.LlenarGridPorCriterio())
+                {
+                    lblError.Text = oInformePago.error;
+                }
+                else
+                {
+                    lblError.Text = "";
+                }
+            }
             oInformePago = null;
         }
+
+        protected void ddlOrdenar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlOrdenar.SelectedValue == "0")
+            {
+                ddlValorCriterio.Items.Clear();
+            }
+
+            if (ddlOrdenar.SelectedValue == "1")
+            {
+                LlenarValoresSeleccion(estados);
+            }
+
+            if (ddlOrdenar.SelectedValue == "2")
+            {
+                LlenarValoresSeleccion(aseguradoras);
+            }
+
+            //if (ddlOrdenar.SelectedValue == "3")
+            //{
+            //    LlenarValoresSeleccion(marcas);
+            //}
+
+            //if (ddlOrdenar.SelectedValue == "4")
+            //{
+            //    LlenarValoresSeleccion(tipos);
+            //}
+
+            //if (ddlOrdenar.SelectedValue == "5")
+            //{
+            //    LlenarValoresSeleccion(gamas);
+            //}
+
+            //if (ddlOrdenar.SelectedValue == "6")
+            //{
+            //    LlenarValoresSeleccion(modelos);
+            //}
+        }
+
+        private void LlenarValoresSeleccion(string[] arr)
+        {
+            ddlValorCriterio.Items.Clear();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                ListItem d;
+                d = new ListItem(arr[i], arr[i]);
+                ddlValorCriterio.Items.Add(d);
+            }
+        }
+
     }
 }

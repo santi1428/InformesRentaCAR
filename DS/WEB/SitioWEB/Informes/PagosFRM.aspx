@@ -14,14 +14,14 @@
                                         <div class="input-group-prepend">
                                             <label class="input-group-text" for="ddlOrdenar"><i class="fas fa-filter mr-2"></i> Filtrar por: </label>
                                         </div>
-                                        <asp:DropDownList ID="ddlOrdenar" CssClass="custom-select" runat="server" AutoPostBack="true">
-                                           <%-- <asp:ListItem Value="0">Seleccione el criterio para filtrar</asp:ListItem>
-                                            <asp:ListItem Value="1">Color</asp:ListItem>
-                                            <asp:ListItem Value="2">Estado</asp:ListItem>
-                                            <asp:ListItem Value="3">Marca</asp:ListItem>
+                                        <asp:DropDownList ID="ddlOrdenar" CssClass="custom-select" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlOrdenar_SelectedIndexChanged">
+                                            <asp:ListItem Value="0">Seleccione el criterio para filtrar</asp:ListItem>
+                                            <asp:ListItem Value="1">Estado</asp:ListItem>
+                                            <asp:ListItem Value="2">Aseguradora</asp:ListItem>
+                                            <asp:ListItem Value="3">Cliente</asp:ListItem>
                                             <asp:ListItem Value="4">Tipo</asp:ListItem>
                                             <asp:ListItem Value="5">Gama</asp:ListItem>
-                                            <asp:ListItem Value="6">Modelo</asp:ListItem>--%>
+                                            <asp:ListItem Value="6">Modelo</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
                                 </div>

@@ -45,34 +45,36 @@ namespace libClases_DS.Informes
             }
         }
 
-        //public bool LlenarGridPorCriterio()
-        //{
-        //    if (grdInformePagos == null)
-        //    {
-        //        error = "No definió el grid del informe de vehiculos";
-        //        return false;
-        //    }
-        //    SQL = "SP_Consultar_VehiculoXCriterio";
-        //    clsGrid oGrid = new clsGrid();
-        //    oGrid.SQL = SQL;
-        //    oGrid.gridGenerico = grdInformePagos;
-        //    oGrid.AgregarParametro("@parametro_busqueda", parametroBusqueda);
-        //    oGrid.StoredProcedure = true;
-        //    if (oGrid.LlenarGridWeb())
-        //    {
-        //        grdInformePagos = oGrid.gridGenerico;
-        //        oGrid = null;
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        error = oGrid.Error;
-        //        oGrid = null;
-        //        return false;
-        //    }
-        //}
+        public bool LlenarGridPorCriterio()
+        {
+            if (grdInformePagos == null)
+            {
+                error = "No definió el grid del informe de vehiculos";
+                return false;
+
+            }
+            SQL = "SP_Consultar_PagoXCriterio";
+            clsGrid oGrid = new clsGrid();
+            oGrid.SQL = SQL;
+            oGrid.gridGenerico = grdInformePagos;
+            oGrid.AgregarParametro("@parametro_busqueda", parametroBusqueda);
+            oGrid.StoredProcedure = true;
+            if (oGrid.LlenarGridWeb())
+            {
+                grdInformePagos = oGrid.gridGenerico;
+                oGrid = null;
+                return true;
+            }
+            else
+            {
+                error = oGrid.Error;
+                oGrid = null;
+                return false;
+            }
+        }
 
         #endregion
+
 
     }
 }

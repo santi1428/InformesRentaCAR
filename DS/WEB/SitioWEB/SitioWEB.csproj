@@ -77,6 +77,7 @@
     <Content Include="assets\js\popper.min.js" />
     <Content Include="Informes\AlquileresFRM.aspx" />
     <Content Include="Informes\PagosFRM.aspx" />
+    <Content Include="Informes\ReservasFRM.aspx" />
     <Content Include="Informes\VehiculosFRM.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -94,6 +95,13 @@
     </Compile>
     <Compile Include="Informes\PagosFRM.aspx.designer.cs">
       <DependentUpon>PagosFRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\ReservasFRM.aspx.cs">
+      <DependentUpon>ReservasFRM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Informes\ReservasFRM.aspx.designer.cs">
+      <DependentUpon>ReservasFRM.aspx</DependentUpon>
     </Compile>
     <Compile Include="Informes\VehiculosFRM.aspx.cs">
       <DependentUpon>VehiculosFRM.aspx</DependentUpon>

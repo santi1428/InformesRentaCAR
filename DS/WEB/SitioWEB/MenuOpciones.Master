@@ -105,7 +105,7 @@
                           </li>
                           <li class="nav-item pb-2 pt-2">
                             <a
-                              href="<?php echo URLROOT ?>dashboard/registrarServicio"
+                              href="ReservasFRM.aspx"
                               class="text-white"
                               style="font-size:15px;"
                               ><i class="fas fa-calendar-alt"></i> Reservas</a
@@ -145,13 +145,13 @@
                     </div>
                     <div class="collapse" id="collapseControles">
                       <div class="">
-                        <ul class="nav d-flex flex-column" style="background:#33ba27;">
-                          <li class="nav-item pb-2 pt-2">
-                            <a
-                              href="<?php echo URLROOT ?>dashboard/registrarVeterinario"
-                              class="text-white"
-                              style="font-size:15px;"
-                              >Realizar Alquiler</a
+                        <ul class="nav d-flex flex-column" style="background:#33ba27;">                          
+                            <li class="nav-item pb-2 pt-2">
+                                <a
+                                  href="ReservasFRM.aspx"
+                                  class="text-white"
+                                  style="font-size:15px;"
+                                  >Realizar Reserva</a
                             >
                           </li>
                         </ul>

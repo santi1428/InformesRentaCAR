@@ -10,16 +10,16 @@
 namespace SitioWEB.Informes {
     
     
-    public partial class VehiculosFRM {
+    public partial class ReservasFRM {
         
         /// <summary>
-        /// btnGenerarInformeVehiculos control.
+        /// btnBuscarVehiculos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnGenerarInformeVehiculos;
+        protected global::System.Web.UI.WebControls.LinkButton btnBuscarVehiculos;
         
         /// <summary>
         /// lblError control.
@@ -31,22 +31,31 @@ namespace SitioWEB.Informes {
         protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// ddlOrdenar control.
+        /// TextFechaInicial control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlOrdenar;
+        protected global::System.Web.UI.WebControls.TextBox TextFechaInicial;
         
         /// <summary>
-        /// ddlValorCriterio control.
+        /// TextFechaFInal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlValorCriterio;
+        protected global::System.Web.UI.WebControls.TextBox TextFechaFInal;
+        
+        /// <summary>
+        /// DropDowmGama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDowmGama;
         
         /// <summary>
         /// grdInformeVehiculos control.

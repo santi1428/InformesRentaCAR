@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SitioWEB {
+namespace SitioWEB.Informes {
     
     
-    public partial class MenuOpciones {
+    public partial class AlquileresFRM {
         
         /// <summary>
-        /// head control.
+        /// TextCodReserva control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox TextCodReserva;
         
         /// <summary>
-        /// form1 control.
+        /// buscarReserva control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button buscarReserva;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// grdInformeAlquileres control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.GridView grdInformeAlquileres;
     }
 }

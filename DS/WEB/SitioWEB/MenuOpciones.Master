@@ -86,15 +86,7 @@
                     </div>
                     <div class="collapse" id="collapseServicios">
                       <div class="">
-                        <ul class="nav d-flex flex-column bg-secondary">
-                          <li class="nav-item pb-2 pt-2">
-                            <a
-                              href="AlquileresFRM.aspx"
-                              class="text-white"
-                              style="font-size:15px;"
-                              ><i class="fas fa-file-invoice-dollar"></i> Alquiler Vehiculos</a
-                            >
-                          </li>
+                        <ul class="nav d-flex flex-column bg-secondary">                          
                           <li class="nav-item pb-2 pt-2">
                             <a
                               href="PagosFRM.aspx"
@@ -105,7 +97,7 @@
                           </li>
                           <li class="nav-item pb-2 pt-2">
                             <a
-                              href="<?php echo URLROOT ?>dashboard/registrarServicio"
+                              href="ReservasFRM.aspx"
                               class="text-white"
                               style="font-size:15px;"
                               ><i class="fas fa-calendar-alt"></i> Reservas</a
@@ -119,14 +111,7 @@
                               ><i class="fas fa-car"></i> Vehiculos</a
                             >
                           </li>
-                          <li class="nav-item pb-2 pt-2">
-                            <a
-                              href="<?php echo URLROOT ?>dashboard/registrarServicio"
-                              class="text-white"
-                              style="font-size:15px;"
-                              ><i class="fas fa-undo"></i> Devolución Vehiculos</a
-                            >
-                          </li>
+                          
                         </ul>
                       </div>
                     </div>
@@ -145,13 +130,13 @@
                     </div>
                     <div class="collapse" id="collapseControles">
                       <div class="">
-                        <ul class="nav d-flex flex-column" style="background:#33ba27;">
-                          <li class="nav-item pb-2 pt-2">
-                            <a
-                              href="<?php echo URLROOT ?>dashboard/registrarVeterinario"
-                              class="text-white"
-                              style="font-size:15px;"
-                              >Realizar Alquiler</a
+                        <ul class="nav d-flex flex-column" style="background:#33ba27;">                          
+                            <li class="nav-item pb-2 pt-2">
+                                <a
+                                  href="ReservasFRM.aspx"
+                                  class="text-white"
+                                  style="font-size:15px;"
+                                  >Realizar Reserva</a
                             >
                           </li>
                         </ul>
@@ -175,10 +160,24 @@
                           <ul class="nav d-flex flex-column bg-danger">
                             <li class="nav-item pb-2 pt-2">
                               <a
-                                href="<?php echo URLROOT ?>dashboard/registrarVeterinario"
+                                href="AlquilerFRM.aspx"
                                 class="text-white"
                                 style="font-size:15px;"
                                 >Registrar Alquiler</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="collapse" id="collapseAlquiler">
+                        <div class="">
+                          <ul class="nav d-flex flex-column bg-danger">
+                            <li class="nav-item pb-2 pt-2">
+                              <a
+                                href="DevolucionFRM.aspx"
+                                class="text-white"
+                                style="font-size:15px;"
+                                >Devolver Vehículo</a
                               >
                             </li>
                           </ul>

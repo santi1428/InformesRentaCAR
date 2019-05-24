@@ -5,6 +5,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
         <div class="col-12">
+            <div class="col-11">
+                <h1 style="text-align: center"> Devolver vehículo. </h1>
+            </div>
                     <div class="row">
                         <div class="col-11">
                           <asp:LinkButton ID="btnDevolverVehiculo" CssClass="btn btn-block btn-secondary" runat="server"><i class="fas fa-list-alt mr-2"></i>Devolver Vehículo</asp:LinkButton>

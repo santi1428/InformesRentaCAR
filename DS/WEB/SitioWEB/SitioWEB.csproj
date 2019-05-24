@@ -75,7 +75,7 @@
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\jquery.min.js" />
     <Content Include="assets\js\popper.min.js" />
-    <Content Include="Informes\AlquileresFRM.aspx" />
+    <Content Include="Informes\AlquilerFRM.aspx" />
     <Content Include="Informes\DevolucionFRM.aspx" />
     <Content Include="Informes\PagosFRM.aspx" />
     <Content Include="Informes\ReservasFRM.aspx" />
@@ -83,12 +83,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Informes\AlquileresFRM.aspx.cs">
-      <DependentUpon>AlquileresFRM.aspx</DependentUpon>
+    <Compile Include="Informes\AlquilerFRM.aspx.cs">
+      <DependentUpon>AlquilerFRM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Informes\AlquileresFRM.aspx.designer.cs">
-      <DependentUpon>AlquileresFRM.aspx</DependentUpon>
+    <Compile Include="Informes\AlquilerFRM.aspx.designer.cs">
+      <DependentUpon>AlquilerFRM.aspx</DependentUpon>
     </Compile>
     <Compile Include="Informes\DevolucionFRM.aspx.cs">
       <DependentUpon>DevolucionFRM.aspx</DependentUpon>

@@ -86,15 +86,7 @@
                     </div>
                     <div class="collapse" id="collapseServicios">
                       <div class="">
-                        <ul class="nav d-flex flex-column bg-secondary">
-                          <li class="nav-item pb-2 pt-2">
-                            <a
-                              href="AlquileresFRM.aspx"
-                              class="text-white"
-                              style="font-size:15px;"
-                              ><i class="fas fa-file-invoice-dollar"></i> Alquiler Vehiculos</a
-                            >
-                          </li>
+                        <ul class="nav d-flex flex-column bg-secondary">                          
                           <li class="nav-item pb-2 pt-2">
                             <a
                               href="PagosFRM.aspx"
@@ -168,7 +160,7 @@
                           <ul class="nav d-flex flex-column bg-danger">
                             <li class="nav-item pb-2 pt-2">
                               <a
-                                href="<?php echo URLROOT ?>dashboard/registrarVeterinario"
+                                href="AlquilerFRM.aspx"
                                 class="text-white"
                                 style="font-size:15px;"
                                 >Registrar Alquiler</a

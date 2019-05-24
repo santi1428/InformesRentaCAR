@@ -15,7 +15,7 @@ namespace SitioWEB.Informes
 
         }
 
-        protected void btnGenerarInformeAlquileres_Click(object sender, EventArgs e)
+        protected void btnRealizarAlquiler_Click(object sender, EventArgs e)
         {
             LlenarGrid();
         }

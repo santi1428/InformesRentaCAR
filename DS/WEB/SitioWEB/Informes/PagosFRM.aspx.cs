@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.UI.WebControls;
 using libClases_DS.Informes;
 
 namespace SitioWEB.Informes
@@ -71,10 +70,11 @@ namespace SitioWEB.Informes
                 LlenarValoresSeleccion(aseguradoras);
             }
 
-            //if (ddlOrdenar.SelectedValue == "3")
-            //{
-            //    LlenarValoresSeleccion(marcas);
-            //}
+            if (ddlOrdenar.SelectedValue == "3")
+            {
+                ddlValorCriterio.Items.Clear();
+                LlenarComboClientes();
+            }
 
             //if (ddlOrdenar.SelectedValue == "4")
             //{
@@ -91,6 +91,24 @@ namespace SitioWEB.Informes
             //    LlenarValoresSeleccion(modelos);
             //}
         }
+
+        private void LlenarComboClientes()
+        {
+            PagoCTRL oInformePago = new PagoCTRL();
+            oInformePago.cboCliente = ddlValorCriterio;
+            if (oInformePago.LlenarCombo())
+            {
+                lblError.Text = "";
+            }
+            else
+            {
+                lblError.Text = oInformePago.error;
+            }
+
+            oInformePago = null;
+        }
+
+        
 
         private void LlenarValoresSeleccion(string[] arr)
         {

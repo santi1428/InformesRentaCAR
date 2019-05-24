@@ -26,11 +26,11 @@ namespace SitioWEB.Informes
             oAlquiler.grdInformeAlquileres = grdInformeAlquileres;
                 if(oAlquiler.LlenarGrid())
                 {
-                    lblError.Text = oAlquiler.error;
+                    //lblError.Text = oAlquiler.error;
                 }
                 else
                 {
-                    lblError.Text = "";
+                    //lblError.Text = "";
                 }
             oAlquiler = null;
         }

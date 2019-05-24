@@ -16,6 +16,7 @@ namespace libClases_DS.Informes
         public GridView grdInformePagos { get; set; }
         public string error { get; private set; }
         public string parametroBusqueda { get; set; }
+        public DropDownList cboCliente { get; set; }
         #endregion
 
         #region Metodos
@@ -69,6 +70,40 @@ namespace libClases_DS.Informes
             {
                 error = oGrid.Error;
                 oGrid = null;
+                return false;
+            }
+        }
+
+        public bool LlenarCombo()
+        {
+            //Se valida si el combo existe
+            if (cboCliente == null)
+            {
+                error = "No definió el combo de cliente";
+                return false;
+            }
+            //Como es un procedimiento almacenado, sólo se define el nombre del SP
+            SQL = "Clientes_LlenarCombo";
+            //Creo la clase combo
+            clsCombos oCombo = new clsCombos();
+            //Pasar los parametros a la clase
+            oCombo.SQL = SQL;
+            oCombo.StoredProcedure = true;
+            oCombo.ColumnaTexto = "Texto";
+            oCombo.ColumnaValor = "Valor";
+            oCombo.cboGenericoWeb = cboCliente;
+            if (oCombo.LlenarComboWeb())
+            {
+                //Llena el combo, libera memoria y retorna true
+                cboCliente = oCombo.cboGenericoWeb;
+                oCombo = null;
+                return true;
+            }
+            else
+            {
+                //Lee el error, libera memoria y retorna false
+                error = oCombo.Error;
+                oCombo = null;
                 return false;
             }
         }

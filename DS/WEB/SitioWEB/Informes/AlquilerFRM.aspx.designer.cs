@@ -22,6 +22,15 @@ namespace SitioWEB.Informes {
         protected global::System.Web.UI.WebControls.TextBox TextCodReserva;
         
         /// <summary>
+        /// buscarReserva control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buscarReserva;
+        
+        /// <summary>
         /// grdInformeAlquileres control.
         /// </summary>
         /// <remarks>

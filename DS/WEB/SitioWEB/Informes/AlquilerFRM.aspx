@@ -17,8 +17,10 @@
                                 <div class="input-group-prepend">
                                     <label class="input-group-text"><i class="fas fa-code mr-2"></i> Buscar reserva por código : </label>
                                 </div>
-                                <asp:TextBox ID="TextCodReserva" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextCodReserva" runat="server"></asp:TextBox>                                    
+                                <asp:Button ID="buscarReserva" class="btn btn-primary" style="margin-left: 10px" runat="server" Text="Buscar" />
                             </div>
+                            
                         </div>
                     </div>                    
                     <div class="row">

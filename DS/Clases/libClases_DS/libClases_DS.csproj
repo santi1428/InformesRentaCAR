@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Informes\AlquilerCTRL.cs" />
     <Compile Include="Informes\PagoCTRL.cs" />
+    <Compile Include="Informes\ReservaCTRL.cs" />
     <Compile Include="Informes\VehiculoCTRL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

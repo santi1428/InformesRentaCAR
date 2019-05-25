@@ -81,6 +81,16 @@
                                     <asp:Button ID="btnRegistrarAlquiler" runat="server" Text="Registrar alquiler" CssClass="btn btn-primary btn-block" Enabled="false" OnClick="btnRegistrarAlquiler_Click" />
                                 </div>
                             </div>
+                            <div class="row mt-2">
+                                <div class="col card">
+                                    <div class="card-header text-center">
+                                        Alquileres
+                                    </div>
+                                    <div class="card-body">
+                                        <asp:GridView ID="grdAlquiler" runat="server" CssClass="table table-secondary text-center"></asp:GridView>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>       

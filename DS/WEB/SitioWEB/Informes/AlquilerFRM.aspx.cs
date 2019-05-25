@@ -12,7 +12,10 @@ namespace SitioWEB.Informes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                llenarGridAlquileres();
+            }
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -60,8 +63,19 @@ namespace SitioWEB.Informes
                 lblError.Text = "Se ha realizado el alquiler con éxito";
                 btnRegistrarAlquiler.Enabled = false;
                 limpiarCampos();
+                llenarGridAlquileres();
             }
             else
+            {
+                lblError.Text = oAlquiler.error;
+            }
+        }
+
+        private void llenarGridAlquileres()
+        {
+            AlquilerCTRL oAlquiler = new AlquilerCTRL();
+            oAlquiler.grdAlquiler = grdAlquiler;
+            if (!oAlquiler.LlenarGrid())
             {
                 lblError.Text = oAlquiler.error;
             }

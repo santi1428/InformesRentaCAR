@@ -49,6 +49,24 @@ namespace SitioWEB.Informes {
         protected global::System.Web.UI.WebControls.DropDownList ddlValorCriterio;
         
         /// <summary>
+        /// Control txtFechaInicial.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFechaInicial;
+        
+        /// <summary>
+        /// Control txtFechaFinal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFechaFinal;
+        
+        /// <summary>
         /// Control grdInformePagos.
         /// </summary>
         /// <remarks>

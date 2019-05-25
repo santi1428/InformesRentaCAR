@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -12,6 +13,7 @@ namespace SitioWEB.Informes
     {
         public string[] estados = new string[] { "Pendiente", "Realizado" };
         public string[] aseguradoras = new string[] { "ALLIANZ SEGUROS S.A", "ARL SURA.", "AXA COLPATRIA SEGUROS S.A.", "BBVA SEGUROS COLOMBIA S.A." };
+        public string[] tipos = new string[] { "Efectivo", "Consignacion", "Efecty", "Consignación Bancaria", "Baloto" };
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,14 +22,16 @@ namespace SitioWEB.Informes
 
         protected void btnGenerarInformePagos_Click(object sender, EventArgs e)
         {
-            LlenarGrid();
+
+                LlenarGrid();
+            
         }
 
         private void LlenarGrid()
         {
             PagoCTRL oInformePago = new PagoCTRL();
             oInformePago.grdInformePagos = grdInformePagos;
-            if (ddlValorCriterio.SelectedValue == "")
+            if (ddlOrdenar.SelectedValue == "0")
             {
                 if (!oInformePago.LlenarGrid())
                 {
@@ -41,6 +45,8 @@ namespace SitioWEB.Informes
             else
             {
                 oInformePago.parametroBusqueda = ddlValorCriterio.SelectedValue;
+                oInformePago.parametroFechaInicial = txtFechaInicial.Text.Replace("-", ""); 
+                oInformePago.parametroFechaFinal = txtFechaFinal.Text.Replace("-", "");
                 if (!oInformePago.LlenarGridPorCriterio())
                 {
                     lblError.Text = oInformePago.error;
@@ -76,20 +82,26 @@ namespace SitioWEB.Informes
                 LlenarComboClientes();
             }
 
-            //if (ddlOrdenar.SelectedValue == "4")
-            //{
-            //    LlenarValoresSeleccion(tipos);
-            //}
+            if (ddlOrdenar.SelectedValue == "4")
+            {
+                LlenarValoresSeleccion(tipos);
+            }
 
-            //if (ddlOrdenar.SelectedValue == "5")
-            //{
-            //    LlenarValoresSeleccion(gamas);
-            //}
+            if (ddlOrdenar.SelectedValue == "5")
+            {
+                ddlValorCriterio.Items.Clear();
+                txtFechaInicial.Enabled = true;
+                txtFechaFinal.Enabled = true;
+            }
+            else
+            {
+                txtFechaInicial.Enabled = false;
+                txtFechaFinal.Enabled= false;
+                txtFechaInicial.Text = "";
+                txtFechaFinal.Text = "";
 
-            //if (ddlOrdenar.SelectedValue == "6")
-            //{
-            //    LlenarValoresSeleccion(modelos);
-            //}
+            }
+
         }
 
         private void LlenarComboClientes()

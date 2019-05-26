@@ -72,6 +72,33 @@ namespace libClases_DS.Informes
             }
         }
 
+        public bool LlenarGridVehiculosDisponibles()
+        {
+            if (grdInformeVehiculos == null)
+            {
+                error = "No definió el grid del informe de vehiculos";
+                return false;
+            }
+            SQL = "SP_Consultar_Vehiculos_Disponibles";
+            clsGrid oGrid = new clsGrid();
+            oGrid.SQL = SQL;
+            oGrid.gridGenerico = grdInformeVehiculos;
+            oGrid.AgregarParametro("@parametro_busqueda", parametroBusqueda);
+            oGrid.StoredProcedure = true;
+            if (oGrid.LlenarGridWeb())
+            {
+                grdInformeVehiculos = oGrid.gridGenerico;
+                oGrid = null;
+                return true;
+            }
+            else
+            {
+                error = oGrid.Error;
+                oGrid = null;
+                return false;
+            }
+        }
+
         #endregion
 
 

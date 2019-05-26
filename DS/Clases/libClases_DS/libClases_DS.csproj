@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Informes\AlquilerCTRL.cs" />
+    <Compile Include="Informes\DevolucionCTRL.cs" />
     <Compile Include="Informes\PagoCTRL.cs" />
     <Compile Include="Informes\ReservaCTRL.cs" />
     <Compile Include="Informes\VehiculoCTRL.cs" />
